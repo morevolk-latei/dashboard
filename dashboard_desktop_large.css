@@ -1,0 +1,405 @@
+
+
+header nav.primary-nav{
+	display: block;
+	/* outline: 1px solid red; */
+	float: right;
+	width: initial;
+	margin-top: 8px;
+	margin-right: 2%;
+}
+
+.toggle-nav-box{
+	display: none;
+}
+header nav ul{
+	/* outline: 1px solid #ff0; */
+	list-style-type: none;
+	position: relative;
+	
+	/* top:  8px; */
+	/* right:  10px; */
+}
+header nav ul li{
+	display: inline-block;
+}
+header nav ul li a{
+	display: block;
+	padding:  10px;
+	text-decoration: none;
+	text-transform: capitalize;
+	/* outline: 1px solid #0ff; */
+	color:  #e3e4e9;
+	font-size:  0.9em;
+	letter-spacing: 0.4px;
+	position: relative;
+	font-family: 'Raleway';
+	font-weight: 600;
+}
+header nav ul li a::after{
+	content: '';
+	position: absolute;
+	height:  1px;
+	width:  0;
+	background:  linear-gradient(45deg, #ff0, #0ff);
+	left:  0;
+	top:  0;
+	transition: all 200ms ease;
+}
+header nav ul li a:hover::after{
+	width:  100%;
+}
+header nav ul li:nth-child(4) a{
+	padding-right:  18px;
+	cursor: pointer;
+}
+header nav ul li a > span[rel=down-arrow]{
+	font-size: 0.7em;
+	position: absolute;
+	transform: rotate(90deg);
+	right:  4px;
+	top:  31%;
+	transform: rotate(0deg) translateY(2px);
+	transition: transform 120ms ease-in;
+}
+
+header nav ul li a > span[rel=down-arrow].active{
+	transform: rotate(90deg) translateX(2.4px);
+}
+header nav ul li:nth-child(4) a.active::after{
+	width:  100%;
+}
+header nav ul li:nth-child(4){
+	position: relative;
+}
+/* primary nav profile links styles */
+ul#profileNav{
+	position: absolute;
+	background-color: #f0f0f0;
+	border:  1px solid #d0d0d0;
+	box-shadow: 0 1px 0 1px rgba(10,10,10,0.09);
+	/* top:  109%; */
+	left:  -100%;
+	padding:  8px 6px;
+	border-radius: 4px;
+	cursor: default;
+	display: none;
+	width:  200px;
+}
+ul#profileNav *::after{
+	content: '';
+	position: initial;
+	display: initial;
+}
+ul#profileNav li{
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
+
+ul#profileNav li *{
+	/* color:  #333; */
+}
+ul#profileNav li > div.profile-nav-box{
+	position: relative;
+	display: flex;
+	/* background-color: rgba(0,0,0,0.5); */
+	padding:  0;
+	cursor: default;
+}
+
+ul#profileNav li#profileNavLi{
+	/* outline: 1px solid blue; */
+	position: relative;
+	top:  -10px;
+	background-color: rgba(0,0,0,0.05);
+	/* display: inline-flex; */
+	/* width: 200px; */
+	height:  80px;
+	padding: 0;
+	cursor: default;
+}
+ul#profileNav li > div.profile-nav-box img{
+	width:  60px;
+	/* height:  60px; */
+	border:  3.5px solid #f0f0f0;
+	border-radius: 50%;
+	box-shadow: 0 0 1.5px 0.5px rgba(0,0,0,0.4);
+	position: relative;
+	/* margin-left:  -25px; */
+	cursor: default;
+	/* outline:  1px solid blue; */
+	margin-top:  -20px;
+}
+
+ul#profileNav li > div.profile-nav-box >  #userNameBox{
+	/* outline: 1px solid red; */
+	padding: 0;
+	width:  100%;
+	height:  100%;
+}
+ul#profileNav li > div.profile-nav-box >  #userNameBox h5{
+	/* outline: 1px solid #000; */
+	width: 170%;
+	text-align: center;	
+	/* margin-top:  13px; */
+	position: relative;
+	left: -13px;
+	text-align: left;
+	cursor: default;
+	color:  #333;
+	margin-top: -3px;
+	/* margin-left:  -25px; */
+	/* display: block; */
+}
+ul#profileNav li > div.profile-nav-box >  #userNameBox p{
+	/* outline: 1px solid #a80; */
+	text-align: center;
+	margin-top:  -10px;
+	position: relative;
+	left: -11px;
+	padding: 0;
+}
+ul#profileNav li > div.profile-nav-box >  #userNameBox p a{
+	display: initial;
+	/* padding:  0; */
+	/* font-size:  0.7em; */
+	/* font-weight: bold; */
+	/* color:  teal; */
+}
+ul#profileNav li > div.profile-nav-box >  #userNameBox p a:hover{
+	text-decoration: underline;
+}
+ul#profileNav li > div.profile-nav-box >  #userNameBox p a::after{
+	/* content: '';
+	position: initial;
+	display: initial; */
+}
+
+
+
+
+
+ul#profileNav hr{
+	/* opacity: 0.6;
+	border:  none;
+	height:  1px;
+	background:  linear-gradient(45deg, transparent, rgba(110,110,110,0.7) , transparent); */
+}
+
+
+ul#profileNav li#myResumeLink a, ul#profileNav li#accountLink a{
+	/* color:  #333;
+	border-radius: 5px;
+	font-size:  0.8em; */
+	color: #333 !important;
+}
+ul#profileNav li#myResumeLink a:hover, ul#profileNav li#accountLink a:hover{
+	/* color:  #111;
+	background-color: rgba(0,0,0,0.03); */
+}
+
+
+/* ul#profileNav upper arrow */
+ul#profileNav::before{
+	content: '';
+	position: absolute;
+	width:  0;
+	height:  0;
+	box-shadow: 0 -1px 0 0 rgba(0,0,0,0.2);
+	top:  -20px;
+	left:  55%;
+	border: 10px solid transparent;
+	border-bottom:  10px solid #e0e0e0;
+}
+
+
+
+/* ============================================================================= */
+
+
+/* primary logo styles */
+
+header .primary-logo{
+	/*float: left;
+	outline: 1px solid #fff;
+	display: flex;
+	margin-left:  1.5%;
+	padding:  2px 5px;
+	margin-top:  4px; */
+}
+header .primary-logo img{
+	/* width:  40px;
+	height: 40px;
+	border: 3px solid #fff;
+	border-radius: 50%; */
+	display: block;
+}
+header .primary-logo h4{
+	/* color:  #e5e5e5;
+	line-height: 38px;
+	margin-left:  5px;
+	font-family:  'Raleway','Roboto',arial; */
+}
+
+
+
+/* search form rules */
+
+.search-form{
+	/* outline: 1px solid #fff; */
+	/* float:  left;
+	margin-left:  6.3%;
+	margin-top:  1%;
+	position: relative; */
+}
+.search-form form *{
+	outline: none;
+}
+.search-form form input[type=search]{
+	/* outline: none; */
+	appearance: none;
+	border:  2px solid rgba(200,200,200,0.05);
+	font-size:  1em;
+	padding:  3px 24px 3px 10px;
+	border-radius: 70px;
+	font-family: 'Raleway',"Open Sans",sans-serif;
+	width:  200px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	background-color: rgba(255,255,255,0.16);
+	color:  #333;
+	transition: all 120ms ease-in;
+	margin-top:  -1px;
+}
+.search-form form input[type=submit]{
+	width:  28px;
+	height:  26px;
+	/* position: absolute; */
+	top:  -0.2px;
+	right:  4px;
+	/* border:  none; */
+	background:  url('images/search-icon.svg') center center no-repeat;
+	background-size:  19px;
+	opacity: 0.6;
+	background-color: rgba(0,0,0,0.1);
+}
+.search-form form input[type=submit]:hover{
+	cursor: pointer;
+	opacity: 0.7;
+}
+.search-form form input[type=search]::placeholder{
+	color:  #aaaaaf7f;
+	/* text-transform:  capitalize; */
+}
+.search-form form input[type=search]:focus{
+	width:  300px;
+	background-color: rgba(255,255,255,0.95);
+}
+.search-form form input[type=search]:focus::placeholder{
+	color: #909090;
+}
+
+
+/* left aside style rules */
+
+.left-container .user-info-box {
+	/* outline: 1px solid #fff; */
+/* 	position: relative;
+	margin-top:  24%;
+	text-align: center;
+	padding:  30px 0 10px 0; */
+}
+.left-container .user-info-box img{
+	/* width:  50%;
+	height: auto; */
+}
+
+/* viewResume and userName common class */
+.left-container .user-info-box p.user-info-item{
+	/* color:  rgb(160,160,150);
+	text-align: left; */
+	/* outline: 1px solid orange; */
+	/* margin: 3% 0; */
+	/* padding: 8px 0 8px 38px;
+	background:  url('images/user_icon_white.png') center left no-repeat;
+	background-size: 20px;
+	background-position: 10px 8px;
+	font-family: 'Roboto','Raleway','helvetica','arial';
+	font-size: 0.8em;
+	font-weight: 500;
+	transition: padding-left 80ms ease-in, background-color 50ms ease-out, background-position-x 80ms ease-out; */
+}
+/* viewResume and userName common class */
+.left-container .user-info-box p.user-info-item:hover{
+	/* background-color: rgba(200,200,200,0.1);
+	cursor: pointer;
+	padding-left: 40px;
+	background-position-x: 12px; */
+}
+#userName{
+	/* font-weight: 800;
+	border-bottom: 1px dashed rgba(200,200,200,0.09); */
+}
+
+
+/* main container styles rules */
+
+/* main-container rules */
+
+
+section.main-container{
+	/* position: relative;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top:  0; */
+	/* display: flex; */
+}
+
+.left-container{
+	/* background-color: var(--left-container-bg); */
+	width:  16%;
+	height: 100%;
+	position: absolute;
+	left:  0;
+}
+.toggle-drawer{
+	display: none;
+}
+.right-container{
+	/* height: 100%; */
+	width:  84%;
+	/* position: absolute; */
+	/* right: 0; */
+	/* padding-top:  60px; */
+	/* overflow-y: auto; */
+	/* padding-bottom:  80px; */
+}
+
+.row{
+	/* outline: 1px solid #000; */
+	/* padding:  6px 15px 6px 16px; */
+}
+.col{
+/* 	background-color: #f5f5f5;
+	display: inline-block;
+	margin:  1px 4px;
+	border-radius: 2px;
+	border:  1px solid rgba(50, 50, 58, 0.14); */
+	/* box-shadow: 0px 3px 1px rgba(0,0,0,0.3); */
+}
+.col-25\%{
+	width:  calc(25% - 12px);
+	min-height:  80px;
+}
+.col-50\%{
+	width:  calc(50% - 12px);
+	min-height:  300px;
+}
+.col-33\%{
+	width:  calc(33.333333% - 12px);
+	min-height:  250px;
+}

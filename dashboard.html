@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<title>user::dashboard</title>
+	<link rel="stylesheet" type="text/css" href="dashboard_mobile.css">
+	<link rel="stylesheet" type="text/css" href="dashboard_tablet.css" media="screen and (min-width: 24em)">
+	<link rel="stylesheet" type="text/css" href="dashboard_tablet_large.css" media="screen and (min-width: 49em)">
+	<link rel="stylesheet" type="text/css" href="dashboard_desktop.css" media="screen and (min-width: 50em)">
+	<link rel="stylesheet" type="text/css" href="dashboard_desktop_large.css" media="screen and (min-width: 73em)">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- <script>
+		const netStat = window.navigator.onLine;
+		if(!netStat)
+		{
+			document.write("<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>");
+			document.writeln("<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,800' rel='stylesheet' type='text/css'>");
+		}else {
+			document.writeln('<link rel="stylesheet" type="text/css" href="Raleway.css">');
+			document.writeln('<link rel="stylesheet" type="text/css" href="Roboto.css">');
+		}
+	</script>
+	 -->
+
+	
+	
+</head>
+<body>
+
+	<header id="header">
+		<div class="primary-logo">
+			<img src="images/man.svg" alt="logo" />
+			<h4>Dynobolt</h4>
+		</div>
+
+		<!-- search form -->
+			<div class="search-form">
+				<form method="post" accept-charset="utf-8" id="searchForm" onsubmit="handleSearchFormSubmit()">
+					<input type="search" name="search" placeholder="search..." />
+					<input type="submit" name="" value='' />
+				</form>
+			</div>
+		<!-- search form end -->
+		<!-- toggle  primary nav-->
+			<div class="toggle-nav-box">
+				<div class="line line1"></div>
+				<div class="line line2"></div>
+				<div class="line line3"></div>
+			</div>	
+		<!-- end of toggle primary nav -->
+
+		<nav class="primary-nav">
+			<ul>
+				<li><a href="#" title="">Intern</a></li>
+				<li><a href="#" title="">Jobs</a></li>
+				<li><a href="#" title="">Notification</a></li>
+				<li><a id="profileNavToggle">Profile<span rel="down-arrow">&#10095;</span>
+					<ul id="profileNav">
+						<li id="profileNavLi">
+							<div class="profile-nav-box">
+								<img src="images/man.svg" alt="img">
+								<div id="userNameBox">
+									<h5 id="userName">Rizul Sharma</h5>
+									<p><a href="#">view profile</a></p>
+								</div>
+							</div>
+						</li>
+						<hr>
+						<li id="accountLink"><a href="#">Account Setting</a></li>
+						<li id="myResumeLink"><a href="#">My Resume</a></li>
+					</ul>
+				</a></li>
+				<li><a href="#" title="">Login</a></li>
+			</ul>
+		</nav>
+	</header><!-- /header -->
+
+
+	<!-- main container -->
+		<section class="main-container">
+				<div class="toggle-drawer">
+					<div class="text">Menu</div>
+					<div class="lines">
+						<div class="line line1"></div>
+						<div class="line line2"></div>
+						<div class="line line3"></div>
+					</div>
+				</div>
+			<aside class="left-container">
+				
+				<div class="user-info-box">
+					<img src="images/man.svg" alt="">
+					<p id="userName" class="user-info-item">Rizul Sharma</p>
+					<p id="viewResume" class="user-info-item">My Resume</p>
+					<p id="viewResume" class="user-info-item">Account Setting</p>					
+				</div>
+			</aside>
+			<aside class="right-container">
+				<div class="row row-1">
+					<div class="col col-1 col-25% col-sm-100%"></div>				
+					<div class="col col-2 col-25% col-sm-100%"></div>				
+					<div class="col col-3 col-25% col-sm-100%"></div>				
+					<div class="col col-4 col-25% col-sm-100%"></div>				
+				</div>
+				<div class="row row-2">
+					<div class="col col-1 col-50% col-sm-100%"></div>				
+					<div class="col col-2 col-50% col-sm-100%"></div>				
+				</div>
+				<div class="row row-3">
+					<div class="col col-1 col-33% col-sm-100%"></div>				
+					<div class="col col-2 col-33% col-sm-100%"></div>				
+					<div class="col col-3 col-33% col-sm-100%"></div>				
+				</div>
+			</aside>
+		</section>
+	<!-- main container ends -->
+
+
+
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+	<script>
+		window.jQuery || document.write('<script src="jquery-3.2.1.min.js"><\/script>');
+	</script>
+	<script src="dashboard.js"></script>
+</body>
+</html>
